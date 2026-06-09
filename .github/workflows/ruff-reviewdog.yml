@@ -28,8 +28,9 @@ jobs:
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Use --exit-zero so ruff doesn't crash the pipeline before reviewdog runs
           ruff check . --output-format=rdjson --exit-zero | reviewdog -f=rdjson \
             -name="ruff" \
-            -reporter=github-check \
+            -reporter=github-pr-review \
+            -filter-mode=file \
             -level=warning
+
