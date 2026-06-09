@@ -21,8 +21,4 @@ jobs:
               repo: context.repo.repo,
               issue_number: context.issue.number,
               body: "Hello from review bot! 🤖"
-<<<<<<< HEAD
             })
-=======
-            })
->>>>>>> 07346a5f78428330e49cda9c01b6c96c06f85fdb
