@@ -31,5 +31,5 @@ jobs:
           # Use --exit-zero so ruff doesn't crash the pipeline before reviewdog runs
           ruff check . --output-format=rdjson --exit-zero | reviewdog -f=rdjson \
             -name="ruff" \
-            -reporter=github-pr-review \
+            -reporter=github-check \
             -level=warning
